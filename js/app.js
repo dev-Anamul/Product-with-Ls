@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 
 const form = document.querySelector('.form');
-
+const renderDiv = document.querySelector('.render_div');
 const allDevInfArr = [];
 
 form.addEventListener('submit', (e) => {
@@ -36,5 +36,11 @@ form.addEventListener('submit', (e) => {
     };
 
     allDevInfArr.push(devInfObj);
+    setDataIntoLocal(allDevInfArr);
+    const devDataArray = getDataFromLocal('data');
+    renderHtml(devDataArray, renderDiv);
    console.log(allDevInfArr);
 });
+
+const getDataDev = getDataFromLocal('data');
+renderHtml(getDataDev, renderDiv);
