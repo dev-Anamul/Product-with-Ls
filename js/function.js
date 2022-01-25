@@ -28,7 +28,7 @@ const renderHtml = (dataArr, renderDiv) => {
     const renderBox = renderDiv;
     const devDataArr = dataArr;
     let data = '';
-    devDataArr.map((obj) => {
+    devDataArr?.map((obj) => {
         data += `    <div class="col-md-6">
              <div class="card my-2">
               <img
